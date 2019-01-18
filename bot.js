@@ -35,7 +35,7 @@ client.on('ready', () => {
     console.log(`Users! [ " ${client.users.size} " ]`);
     console.log('')
     console.log('╚[════════════════════════════════════]╝')
-          client.user.setActivity("By:حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً",{type: 'STREAMING'});   
+          client.user.setActivity("By:bk7-v",{type: 'STREAMING'});   
 });
 
 client.on('ready', () => {
@@ -45,7 +45,7 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`G!help | By:حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً`,"http://twitch.tv/teamcraft")
+    client.user.setGame(`G!help | By:bk7-v `,"http://twitch.tv/teamcraft")
     client.user.setStatus("dnd")
  });
 
@@ -275,7 +275,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-__~~TeamCraft Bot~~__ By: حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً
+__~~Graxbot~~__ By: bk7-v
 
 ╔[❖════════════❖]╗
              Prefix = ' G! '
