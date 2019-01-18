@@ -45,11 +45,11 @@ client.on('ready', () => {
     console.log(`on  ${client.guilds.size} Servers `);
     console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setGame(`-help | By:حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً`,"http://twitch.tv/teamcraft")
+    client.user.setGame(`G!help | By:حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً`,"http://twitch.tv/teamcraft")
     client.user.setStatus("dnd")
  });
 
-var prefix = "-"
+var prefix = "G!"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -89,7 +89,7 @@ client.on('message', message => {
 }
 });
 
-var prefix = "-"
+var prefix = "G!"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -130,7 +130,7 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "G!";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -153,7 +153,7 @@ client.on("message", message => {
 })
 
 client.on('message', async message =>{
-  var prefix = "-";
+  var prefix = "G!";
 const ms = require("ms");
 if (message.author.omar) return;
 if (!message.content.startsWith(prefix)) return;
@@ -222,7 +222,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
 client.on('message', message => {
 	if(message.author.bot) return;
-     if (message.content === "-ping") {
+     if (message.content === "G!ping") {
       const embed = new Discord.RichEmbed()
 
   .setColor("#FF0000")
@@ -246,7 +246,7 @@ client.on ("guildMemberRemove", member => {
 })
 
 client.on('message', function(msg) {
-    if(msg.content.startsWith (prefix  + 'server')) {
+    if(msg.content.startsWith (prefix  + 'G!server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
@@ -266,7 +266,7 @@ client.on('message', function(msg) {
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help") {
+     if (message.content === prefix + "G!help") {
 		 message.channel.send('**تم الأرسال في الخاص**');
             
 	
@@ -278,64 +278,64 @@ client.on('message', message => {
 __~~TeamCraft Bot~~__ By: حًجّـيِّ حًأّروٌکْهّـ تٌـأّيِّمً
 
 ╔[❖════════════❖]╗
-             Prefix = ' - '
+             Prefix = ' G! '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
              Admin Commands
 ╚[❖════════════❖]╝
 
-❖ -kick <mention> ➾ طرد شخص من السيرفر
+❖ G!kick <mention> ➾ طرد شخص من السيرفر
 
-❖ -ban <mention> ➾ باند لي الشخص
+❖ G!ban <mention> ➾ باند لي الشخص
 
-❖ -clear ➾ مسح الشات
+❖ G!clear ➾ مسح الشات
 
-❖ -mute <mention> ➾ اعطاء ميوت لي الشخص
+❖ G!mute <mention> ➾ اعطاء ميوت لي الشخص
 
-❖ -unmute <mention> ➾ فك الميوت عن الشخص
+❖ G!unmute <mention> ➾ فك الميوت عن الشخص
 
-❖ -bc <message> ➾ لأرسال رسالة لجميع الأعضاء على الخاص
+❖ G!bc <message> ➾ لأرسال رسالة لجميع الأعضاء على الخاص
 
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
 
-❖ -member ➾ لمعرفة الأعضاء الموجودة في السيرفر
+❖ G!member ➾ لمعرفة الأعضاء الموجودة في السيرفر
 
-❖ -id ➾ معرفة الايدي
+❖ G!id ➾ معرفة الايدي
 
-❖ -ping ➾ لروئية بينق البوت
+❖ G!ping ➾ لروئية بينق البوت
 
-❖ -bot ➾ معلومات عن البوت
+❖ G!bot ➾ معلومات عن البوت
 
-❖ -server ➾ معلومات السيرفر 
+❖ G!server ➾ معلومات السيرفر 
 
 ╔[❖════════════❖]╗
             Music  Commands
 ╚[❖════════════❖]╝
 
-❖-p  『تشغيل الاغاني』
+❖G!p  『تشغيل الاغاني』
 
-❖-sk 『تخطي الاغاني』
+❖G!sk 『تخطي الاغاني』
 
-❖-st  『إيقاف الاغاني』
+❖G!st  『إيقاف الاغاني』
 
-❖-vol  『تحكم في درجة الصوت』
+❖G!vol  『تحكم في درجة الصوت』
 
-❖-que『قائمة الانتظار من الأغاني』
+❖G!que『قائمة الانتظار من الأغاني』
 
-❖-pau  『أيقاف الاغاني』
+❖G!pau  『أيقاف الاغاني』
 
-❖-res  『تشغيل الاغاني』
-
-==================================================================
-
-رابط السيرفر: https://discord.gg/kW5UUhf
+❖G!res  『تشغيل الاغاني』
 
 ==================================================================
 
-رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=510459415825088512&permissions=0&scope=bot
+رابط السيرفر: https://discord.gg/UHPt523
+
+==================================================================
+
+رابط البوت : https://discordapp.com/api/oauth2/authorize?client_id=535838909909696562&permissions=0&scope=bot
 
 ==================================================================
 
@@ -345,7 +345,7 @@ __~~TeamCraft Bot~~__ By: حًجّـيِّ حًأّروٌکْهّـ تٌـأّي
 });
 
 client.on("message", msg => {
-    var prefix = "-";
+    var prefix = "G!";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -365,7 +365,7 @@ msg.channel.send({embed: embed})
 });
 
 client.on('message', message => {
-                 var prefix = "-"
+                 var prefix = "G!"
            if (message.content.startsWith(prefix + "id")) {
      var args = message.content.split(" ").slice(1);
      let user = message.mentions.users.first();
@@ -394,7 +394,7 @@ client.on('message', message => {
 
 client.on('message', message => {
              if (!message.channel.guild) return;
-     if(message.content =='-member')
+     if(message.content =='G!member')
      var IzRo = new Discord.RichEmbed()
      .setThumbnail(message.author.avatarURL)
      .setFooter(message.author.username, message.author.avatarURL) 
@@ -426,7 +426,7 @@ let embed = new Discord.RichEmbed()
                 
                                  .addField('شكرا لدخولك سيرفر', `${member.guild.name}`,true)
                                    
- .setFooter("TEAM CRAFT/تيم كرافت")
+ .setFooter("Grax|*|جراكس")
     .setTimestamp()
 
   channel.sendEmbed(embed);
@@ -436,7 +436,7 @@ let embed = new Discord.RichEmbed()
 
 
 client.on("message", message => {
-        var prefix = "-";// البرفكس
+        var prefix = "G!";// البرفكس
     if(message.content.startsWith(prefix + "setwlc")) {
         let args = message.mentions.channels.first();
             if(!args) message.channel.send("** منشن روم . :x:**").then(m => {    
@@ -464,7 +464,7 @@ m.delete(1500);
 });
 
 client.on("message", message => {
-        var prefix = "-";//البرفكس
+        var prefix = "G!";//البرفكس
     if(message.content.startsWith(prefix + "setout")) {
         let args = message.mentions.channels.first();
             if(!args) message.channel.send("** منشن روم . :x:**");
@@ -490,7 +490,7 @@ client.on("message", message => {
 });
 
 const config = {
-    prefix : "-",
+    prefix : "G!",
     owner : ['507974724912021515'],
 };
 //By Request of [ function ]
@@ -906,10 +906,10 @@ function play(guild, song, message) {
  
 
 client.on('message', message => {
-    if (message.content === '$help-music') {
+    if (message.content === 'G!help-music') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك**')
-        .setDescription('** ( $ ) برفكس البوت**')
+        .setDescription('** ( G! ) برفكس البوت**')
         .addField('Play أوامر', '1.play    2.p    3.search    4.ply')
         .addField('Skip أوامر', '1.Skip    2.ski    3.s    4.sk')
         .addField('Stop أوامر', '1.Stop    2.st    3.sto')
@@ -1602,7 +1602,7 @@ client.on('message',async message => {
 });
 
 client.on("message", msg => {
-var prefix = "-";// البرفكس
+var prefix = "G!";// البرفكس
  if(msg.content.startsWith(prefix +  "bot")) {
 let embed24 = new Discord.RichEmbed()   
    .setThumbnail(client.user.avatarURL)
@@ -1637,10 +1637,10 @@ message.channel.send(`${args}`);
 
 client.on('message', msg => {
   if(msg.content === 'رابط')
-  msg.reply('https://discord.gg/kW5UUhf')
+  msg.reply('https://discord.gg/UHPt523')
 });
 
-const adminprefix = "-";
+const adminprefix = "G!";
 const devs = ['507974724912021515','473623736558288896'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -1695,7 +1695,7 @@ message.channel.send("``لا تستطيع سحب "+ message.mentions.members.fir
 message.react("❌")
  }}});
 
-var prefix = "-"
+var prefix = "G!"
 
 
 
@@ -1718,7 +1718,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "-";
+  var prefix = "G!";
 
   client.on("message", message => {
   
@@ -1741,14 +1741,14 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("-avatar")) {
+if (message.content.startsWith("G!avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
 
 
 client.on('ready',  () => {
-    console.log('تم تشغيل :TeamCraft  ');
+    console.log('تم تشغيل :Graxbot  ');
     console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
     console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
