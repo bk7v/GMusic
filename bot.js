@@ -16,7 +16,7 @@ const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 
 const GOOGLE_API_KEY = 'AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8';
 const youtube = new YouTube(GOOGLE_API_KEY);
-const PREFIX = '-';
+const PREFIX = 'G!';
 
 const queue = new Map();
 const client = new Discord.Client({disableEveryone: true}); 
@@ -144,7 +144,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
         footer: {
-          text: "TEAM CRAFT/تيم كرافت"
+          text: "✘ 𝓖𝓡𝓐𝓧 ✘"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -220,23 +220,18 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
  
 });
 
-client.on('message', message => {
-	if(message.author.bot) return;
-     if (message.content === "G!ping") {
-      const embed = new Discord.RichEmbed()
-
-  .setColor("#FF0000")
-  .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` TeamCraft'Bot
- .`, 'https://cdn.discordapp.com/avatars/349095859859881984/6a942bc4ff4d014a222dd91e1a6daa48.jpg?size=128')
-
-  message.channel.sendEmbed(embed);
-    }
-});
-               
+client.on('message' , message => {
+  ;
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "ping")) {
+ message.channel.send('Pong...').then((msg) => {
+      msg.edit(`\`\`\`javascript\nTime taken: ${msg.createdTimestamp - message.createdTimestamp} ms.\nDiscord API: ${Math.round(client.ping)} ms.\`\`\``);
+ })
+  }  
+ });               
  client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "💚MEMBERS💚");
+   var role = member.guild.roles.find ("name", "𝐌𝐄𝐌𝐁𝐄𝐑𝐒");
    member.addRole (role);
   
 })
@@ -246,7 +241,7 @@ client.on ("guildMemberRemove", member => {
 })
 
 client.on('message', function(msg) {
-    if(msg.content.startsWith (prefix  + 'G!server')) {
+    if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
@@ -266,7 +261,7 @@ client.on('message', function(msg) {
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "G!help") {
+     if (message.content === prefix + "help") {
 		 message.channel.send('**تم الأرسال في الخاص**');
             
 	
@@ -366,7 +361,7 @@ msg.channel.send({embed: embed})
 
 client.on('message', message => {
                  var prefix = "G!"
-           if (message.content.startsWith(prefix + "id")) {
+           if (message.content.startsWith(prefix + "user")) {
      var args = message.content.split(" ").slice(1);
      let user = message.mentions.users.first();
      var men = message.mentions.users.first();
@@ -398,7 +393,7 @@ client.on('message', message => {
      var IzRo = new Discord.RichEmbed()
      .setThumbnail(message.author.avatarURL)
      .setFooter(message.author.username, message.author.avatarURL) 
-     .setTitle(':tulip:| Members info')
+     .setTitle('🌷| Members info')
      .addBlankField(true)
      .addField(':green_book:| Online ',
      `${message.guild.members.filter(m=>m.presence.status == 'online').size}`)
@@ -408,32 +403,6 @@ client.on('message', message => {
      .addField('Members Count',`${message.guild.memberCount}`)
      message.channel.send(IzRo);
    });
-
-    
-client.on('guildMemberRemove', member => {
-let channel = member.guild.channels.find(c => c.name === 'شات-الترحيب-🙌');
-let memberavatar = member.user.avatarURL
-  if (!channel) return; 
-let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setThumbnail(memberavatar)
-    .addField('🎽 | الاسم :  ',`${member}`)
-    .addField('📢 | لقد غادر:' , `لقد خرج منا عضو هو , ${member}:cry: `)
-    .addField('🆔 | الايدي :', "**[" + `${member.id}` + "]**" )
-            .addField('➡| تبقى',`${member.guild.memberCount}`)
-           
-              .addField("الاسم:",`<@` + `${member.id}` + `>`, true)
-                
-                                 .addField('شكرا لدخولك سيرفر', `${member.guild.name}`,true)
-                                   
- .setFooter("Grax|*|جراكس")
-    .setTimestamp()
-
-  channel.sendEmbed(embed);
-});
-
-
-
 
 client.on("message", message => {
         var prefix = "G!";// البرفكس
@@ -491,7 +460,7 @@ client.on("message", message => {
 
 const config = {
     prefix : "G!",
-    owner : ['507974724912021515'],
+    owner : ['446243110025166858'],
 };
 //By Request of [ function ]
 var color = new Discord.RichEmbed().setColor('#000000').setColor('#36393e')
@@ -1485,7 +1454,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 });
 
     client.on('message', message => {
-        var prefix = "-";
+        var prefix = "G!";
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
 
@@ -1620,15 +1589,7 @@ msg.channel.sendEmbed(embed24)
  });
 
 
-client.on('message',function(message) {
-	if(message.author.bot) return;
-	if(message.channel.type === 'dm') return;
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "say")) {
-if(!args) return;
-message.channel.send(`${args}`); 
-  }
-});
+
 
 
   
@@ -1641,7 +1602,7 @@ client.on('message', msg => {
 });
 
 const adminprefix = "G!";
-const devs = ['507974724912021515','473623736558288896'];
+const devs = ['533243231509544960','446243110025166858'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -1702,7 +1663,7 @@ var prefix = "G!"
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("bcall")) {
+    if (message.content.startsWith(prefix + "bcall")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
