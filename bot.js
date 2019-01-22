@@ -1719,15 +1719,30 @@ client.on('ready',  () => {
 
 
 
-
-
-     
-
-   
+client.on('message', message => {
+  if (true) {
+if (message.content === 'G!invite') {
+      message.author.send(' رابط البوت |  https://discordapp.com/api/oauth2/authorize?client_id=535838909909696562&permissions=0&scope=bot ').catch(e => console.log(e.stack));
+ 
+    }
+   }
+  });
  
 
 
 
+client.on('message', message => {
+     if (message.content === "G!invite") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
+     
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
 
    
 
